@@ -1,0 +1,27 @@
+{
+  "name": "@repo/connectrpc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/example_connect.js",
+  "module": "./dist/example_connect.mjs",
+  "types": "./dist/example_connect.d.ts",
+  "scripts": {
+    "build": "buf generate && tsup gen/proto/demo/v1/example_connect.ts --format cjs,esm --dts"
+  },
+  "keywords": [],
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.10.0",
+    "@connectrpc/connect": "^1.4.0",
+    "@connectrpc/connect-web": "^1.4.0"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.39.0",
+    "@bufbuild/protoc-gen-es": "^1.10.0",
+    "@connectrpc/protoc-gen-connect-es": "^1.4.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.3"
+  }
+}

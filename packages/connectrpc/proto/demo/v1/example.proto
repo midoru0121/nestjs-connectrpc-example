@@ -1,0 +1,50 @@
+syntax = "proto3";
+package demo.v1;
+
+service DemoService {
+  rpc CreateUser(UserCreateRequest) returns (UserCreateResponse) {}
+
+  rpc GetUser(UserGetRequest) returns (UserGetResponse) {}
+  
+  rpc UpdateUser(UserUpdateRequest) returns (UserUpdateResponse) {}
+
+  rpc DeleteUser(UserDeleteRequest) returns (UserDeleteResponse) {}
+}
+
+message UserCreateRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message UserCreateResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message UserGetRequest {}
+
+message UserGetResponse {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+}
+
+message UserUpdateRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message UserUpdateResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message UserDeleteRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message UserDeleteResponse {
+  bool success = 1;
+  string message = 2;
+}

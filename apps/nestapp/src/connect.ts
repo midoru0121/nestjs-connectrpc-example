@@ -9,4 +9,21 @@ export default (router: ConnectRouter) =>
         message: 'created!',
       };
     },
+    getUser: async () => {
+      return {
+        name: 'hello',
+      };
+    },
+    updateUser: async () => {
+      return {
+        success: true,
+        message: 'updated!',
+      };
+    },
+    deleteUser: async () => {
+      return {
+        success: true,
+        message: 'deleted!',
+      };
+    },
   });

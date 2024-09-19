@@ -4,10 +4,10 @@ import './App.css'
 import { createPromiseClient } from "@connectrpc/connect";
 import { createConnectTransport } from "@connectrpc/connect-web";
 
-import { DemoService } from "@repo/connect_gen/demo"
+import { DemoService } from "@repo/connectrpc"
 
 const transport = createConnectTransport({
-  baseUrl: "http://localhost:8080",
+  baseUrl: "http://localhost:3000",
 });
 
 const client = createPromiseClient(DemoService, transport);
